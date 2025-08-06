@@ -6,7 +6,11 @@ const adminRouter = require("./routes/admin");
 const userRouter = require("./routes/user");
 const cors = require("cors");
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://ama-virid.vercel.app/",
+  })
+);
 app.use(express.json());
 app.use("/admin", adminRouter);
 app.use("/user", userRouter);
