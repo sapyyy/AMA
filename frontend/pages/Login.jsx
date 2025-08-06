@@ -71,19 +71,6 @@ function Form() {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    if (formData.password.length < 8) {
-      setError("Password should atleast be 8 characters long");
-      return;
-    }
-    if (!/[!@#$^&*<>?~+=-_]/.test(formData.password)) {
-      setError("Password should contain atleast one special character");
-      return;
-    }
-    if (!/[A-Z]/.test(formData.password)) {
-      setError("Password should contain atleast one uppecase letter");
-      return;
-    }
-
     validateLogin(formData.email, formData.password);
     setFormData({ email: "", password: "" });
   };

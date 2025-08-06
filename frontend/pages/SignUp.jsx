@@ -61,19 +61,9 @@ function Form() {
     e.preventDefault();
     setLoading(true);
 
-    if (formData.password.length < 8) {
+    if (formData.password.length < 6) {
       setLoading(false);
       setError("Password should atleast be 8 characters long");
-      return;
-    }
-    if (!/[!@#$^&*<>?~+=-_]/.test(formData.password)) {
-      setLoading(false);
-      setError("Password should contain atleast one special character");
-      return;
-    }
-    if (!/[A-Z]/.test(formData.password)) {
-      setLoading(false);
-      setError("Password should contain atleast one uppecase letter");
       return;
     }
     if (formData.password !== formData.confirmPassword) {
