@@ -93,7 +93,8 @@ export function CreateAmas() {
         <br />
         <input
           className="px-5 py-2 border border-b-3 cursor-pointer rounded-xl hover:text-neutral-50 hover:bg-black transition duration-300"
-          type="Send Message"
+          type="submit"
+          value="Send Message"
         />
       </form>
     </div>
