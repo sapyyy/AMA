@@ -63,7 +63,7 @@ function Form() {
 
     if (formData.password.length < 6) {
       setLoading(false);
-      setError("Password should atleast be 8 characters long");
+      setError("Password should atleast be 6 characters long");
       return;
     }
     if (formData.password !== formData.confirmPassword) {
