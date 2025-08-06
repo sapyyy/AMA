@@ -11,6 +11,10 @@ app.use(express.json());
 app.use("/admin", adminRouter);
 app.use("/user", userRouter);
 
+app.get("/", (req, res) => {
+  res.status(200).json({ status: "Server is running fine!" });
+});
+
 app.use((req, res) => {
   res.status(400).json({ status: "Bad Request" });
 });
