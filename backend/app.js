@@ -8,7 +8,7 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: "https://ama-virid.vercel.app/",
+    origin: "https://ama-virid.vercel.app",
   })
 );
 app.use(express.json());
