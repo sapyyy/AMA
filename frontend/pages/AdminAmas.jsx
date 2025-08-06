@@ -37,7 +37,7 @@ export function AdminAmas() {
 
           if (res) {
             // store the link inside
-            setShareLink(`https://ama-frontend.vercel.app/post-ama/${id}`);
+            setShareLink(`https://ama-virid.vercel.app/post-ama/${id}`);
             setAmas(res.data.questions);
             setUserName(res.data.username);
             logSuccess();
