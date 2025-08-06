@@ -3,10 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { Loading } from "../components/Loading";
 
 export function CreateAmas() {
   const { id } = useParams();
   const [qs, setQs] = useState("");
+  const [loading, setLoading] = useState(false);
   const apiUrl = import.meta.env.VITE_URL;
 
   useEffect(() => {
@@ -25,8 +27,11 @@ export function CreateAmas() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setLoading(true);
 
-    if (!qs.trim()) return;
+    if (!qs.trim()) {
+      setLoading(false);
+    }
 
     try {
       const res = await axios.post(`${apiUrl}/user/ama-post/${id}`, {
@@ -36,7 +41,13 @@ export function CreateAmas() {
       setQs("");
     } catch (res) {
       toast.error("Error sending ama");
+    } finally {
+      setLoading(false);
     }
+  }
+
+  if (loading) {
+    return <Loading></Loading>;
   }
 
   return (
