@@ -159,13 +159,13 @@ export function AdminAmas() {
           <h3 className="text-2xl font-bold">Share this link to start</h3>
           <div
             title="click to copy the link"
-            className="h-10 w-7/8 text-[0.7rem] md:text-[1rem] italic border-2 border-b-5 px-2 border-black rounded-2xl relative flex justify-center items-center text-black"
+            className="h-15 w-7/8 md:text-xl italic border-2 border-b-5 px-2 border-black rounded-2xl relative flex justify-center items-center text-black"
           >
             <div className="text-center">{shareLink}</div>
             <img
               src={imgLink}
               about="copy-logo"
-              className="w-6 absolute right-3 top-1 border-2 rounded object-contain bg-amber-50 border-black transition-all duration-300 hover:opacity-50"
+              className="w-6 absolute right-3 top-3 border-2 rounded object-contain bg-amber-50 border-black transition-all duration-300 hover:opacity-50"
               onClick={async () => {
                 await navigator.clipboard.writeText(shareLink);
                 copiedSuccess();

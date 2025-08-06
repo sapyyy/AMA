@@ -29,8 +29,9 @@ export function CreateAmas() {
     e.preventDefault();
     setLoading(true);
 
-    if (!qs.trim()) {
+    if (qs.trim() == "") {
       setLoading(false);
+      return;
     }
 
     try {
