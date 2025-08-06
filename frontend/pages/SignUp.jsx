@@ -13,6 +13,7 @@ export function SignUp() {
 
 function Form() {
   const navigate = useNavigate();
+  const apiUrl = import.meta.env.VITE_URL;
   // states
   const [error, setError] = useState("");
   const [formData, setFormData] = useState({
@@ -30,7 +31,7 @@ function Form() {
   // function to post to validateLogin the login
   const validateLogin = async (email, password) => {
     try {
-      const res = await axios.post("http://localhost:3000/admin/signup", {
+      const res = await axios.post(`${apiUrl}/admin/signup`, {
         email: email,
         password: password,
       });

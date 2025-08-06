@@ -4,11 +4,12 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Loading } from "../components/Loading";
 import { motion } from "motion/react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 let count = 0;
 
 export function AdminAmas() {
+  const apiUrl = import.meta.env.VITE_URL;
   const [shareLink, setShareLink] = useState("unable to fetch link");
   const [userName, setUserName] = useState("anon");
   const [amas, setAmas] = useState([""]);
@@ -27,7 +28,7 @@ export function AdminAmas() {
         const { id, token } = JSON.parse(storage);
         // fetch amas from the website
         try {
-          const res = await axios.get("http://localhost:3000/admin/amas", {
+          const res = await axios.get(`${apiUrl}/admin/amas`, {
             headers: {
               Authorization: `Bearer ${token}`,
               id: id,
@@ -36,7 +37,7 @@ export function AdminAmas() {
 
           if (res) {
             // store the link inside
-            setShareLink(`http://localhost:5173/post-ama/${id}`);
+            setShareLink(`https://ama-frontend.vercel.app/post-ama/${id}`);
             setAmas(res.data.questions);
             setUserName(res.data.username);
             logSuccess();
@@ -61,7 +62,7 @@ export function AdminAmas() {
     if (storage) {
       const { id, token } = JSON.parse(storage);
       try {
-        const result = await axios.delete("http://localhost:3000/admin/amas", {
+        const result = await axios.delete(`${apiUrl}/admin/amas`, {
           headers: {
             Authorization: `Bearer ${token}`,
             id: id,

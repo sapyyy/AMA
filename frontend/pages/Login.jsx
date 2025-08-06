@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { useLocation } from "react-router-dom";
+import { Loading } from "../components/Loading";
 
 export function Login() {
   return (
@@ -15,12 +16,14 @@ export function Login() {
 function Form() {
   const location = useLocation();
   const navigate = useNavigate();
+  const apiUrl = import.meta.env.VITE_URL;
   // states
   const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+  const [loading, setLoading] = useState(false);
 
   // useEffect to auto login
   useEffect(() => {
@@ -36,7 +39,7 @@ function Form() {
   // function to post to validateLogin the login
   const validateLogin = async (email, password) => {
     try {
-      const res = await axios.post("http://localhost:3000/admin/signin", {
+      const res = await axios.post(`${apiUrl}/admin/signin`, {
         email: email,
         password: password,
       });
@@ -52,6 +55,8 @@ function Form() {
       navigate("/see-ama");
     } catch (err) {
       setError(err.response.data.status);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -83,10 +88,15 @@ function Form() {
     setFormData({ email: "", password: "" });
   };
 
+  if (loading) {
+    return <Loading></Loading>;
+  }
+
   return (
     <form
       onSubmit={(e) => {
         submitHandler(e);
+        setLoading(true);
       }}
       className="flex flex-col space-y-2"
     >

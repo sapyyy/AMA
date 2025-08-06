@@ -7,11 +7,12 @@ import toast from "react-hot-toast";
 export function CreateAmas() {
   const { id } = useParams();
   const [qs, setQs] = useState("");
+  const apiUrl = import.meta.env.VITE_URL;
 
   useEffect(() => {
     async function validateUser() {
       try {
-        const res = await axios.get(`http://localhost:3000/user/ama/${id}`);
+        const res = await axios.get(`${apiUrl}/user/ama/${id}`);
         toast.success("User found");
       } catch (err) {
         toast.error("No user found");
@@ -28,12 +29,9 @@ export function CreateAmas() {
     if (!qs.trim()) return;
 
     try {
-      const res = await axios.post(
-        `http://localhost:3000/user/ama-post/${id}`,
-        {
-          question: qs,
-        }
-      );
+      const res = await axios.post(`${apiUrl}/user/ama-post/${id}`, {
+        question: qs,
+      });
       toast.success("AMA sent!");
       setQs("");
     } catch (res) {
