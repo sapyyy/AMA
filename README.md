@@ -3,8 +3,7 @@
 AMA is a website which is a space to drop your thoughts, questions, or confessions without revealing who you are. No names. No pressure. Just honest questions.
 
 # Link 🔗
-
-Website Link: [AMA](https://ama-virid.vercel.app/)
+https://github.com/user-attachments/assets/6458375e-8ac0-4610-a827-d2a25d042d80
 
 # Preview 🖼️
 
