@@ -41,6 +41,7 @@ https://github.com/user-attachments/assets/be7c8d37-511c-4e88-b01d-df49f657bed8
 
 # Folder Structure 📁
 
+```
 .
 ├── AMA/
 ├── ├── backend/
@@ -125,6 +126,7 @@ https://github.com/user-attachments/assets/be7c8d37-511c-4e88-b01d-df49f657bed8
 ├── │   ├── vercel.json
 ├── │   └── vite.config.js
 └── └── README.md
+```
 
 # Tech Stack 💻
 
