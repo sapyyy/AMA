@@ -3,8 +3,8 @@
 AMA is a website which is a space to drop your thoughts, questions, or confessions without revealing who you are. No names. No pressure. Just honest questions.
 
 # Link 🔗
+Website Link: [Link](https://ama-virid.vercel.app/)
 
-Website Link: [AMA](https://ama-virid.vercel.app/)
 
 # Preview 🖼️
 
@@ -15,8 +15,8 @@ Website Link: [AMA](https://ama-virid.vercel.app/)
 ![image5](/preview-images/ss5.png)
 
 # Walkthrough 🧭
+https://github.com/user-attachments/assets/be7c8d37-511c-4e88-b01d-df49f657bed8
 
-[![AMA walkthrough video](/preview-images/ss1.png)](https://youtu.be/jifupObl15M)
 
 # Features ✨
 
@@ -41,48 +41,50 @@ Website Link: [AMA](https://ama-virid.vercel.app/)
 
 # Folder Structure 📁
 
-- AMA
-  - backend
-    - db
-      - mongo.js
-    - middlewares
-      - admin.js
-    - routes
-      - admin.js
-      - user.js
-    * .env
-    * .gitignore
-    * package.json
-    * package-lock.json
-    * vercel.json
-  - frontend
-    - components
-      - Loading.jsx
-    - pages
-      - images
-        - copy.png
-        - doodle.png
-      * AdminAmas.jsx
-      * CreateAmas.jsx
-      * Landing.jsx
-      * Login.jsx
-      * SignUp.jsx
-    - src
-      - assests
-        - react.svg
-      * App.jsx
-      * index.css
-      * main.jsx
-    * .evn
-    * .gitignore
-    * eslint.config.js
-    * index.html
-    * package.json
-    * package-lock.json
-    * README.md
-    * vercel.json
-    * vite.config.js
-  * README.md
+```
+AMA/
+├── backend/
+│   ├── db/
+│   │   └── mongo.js
+│   ├── middlewares/
+│   │   └── admin.js
+│   ├── routes/
+│   │   ├── admin.js
+│   │   └── user.js
+│   ├── .env
+│   ├── .gitignore
+│   ├── package.json
+│   ├── package-lock.json
+│   └── vercel.json
+├── frontend/
+│   ├── components/
+│   │   └── Loading.jsx
+│   ├── pages/
+│   │   ├── images/
+│   │   │   ├── copy.png
+│   │   │   └── doodle.png
+│   │   ├── AdminAmas.jsx
+│   │   ├── CreateAmas.jsx
+│   │   ├── Landing.jsx
+│   │   ├── Login.jsx
+│   │   └── SignUp.jsx
+│   ├── src/
+│   │   ├── assets/
+│   │   │   └── react.svg
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── .env
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── README.md
+│   ├── vercel.json
+│   └── vite.config.js
+└── README.md
+```
 
 # Tech Stack 💻
 
