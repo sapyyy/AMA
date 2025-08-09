@@ -41,48 +41,48 @@ https://github.com/user-attachments/assets/be7c8d37-511c-4e88-b01d-df49f657bed8
 
 # Folder Structure 📁
 
-- AMA
-  - backend
-    - db
-      - mongo.js
-    - middlewares
-      - admin.js
-    - routes
-      - admin.js
-      - user.js
-    * .env
-    * .gitignore
-    * package.json
-    * package-lock.json
-    * vercel.json
-  - frontend
-    - components
-      - Loading.jsx
-    - pages
-      - images
-        - copy.png
-        - doodle.png
-      * AdminAmas.jsx
-      * CreateAmas.jsx
-      * Landing.jsx
-      * Login.jsx
-      * SignUp.jsx
-    - src
-      - assests
-        - react.svg
-      * App.jsx
-      * index.css
-      * main.jsx
-    * .evn
-    * .gitignore
-    * eslint.config.js
-    * index.html
-    * package.json
-    * package-lock.json
-    * README.md
-    * vercel.json
-    * vite.config.js
-  * README.md
+AMA/
+├── backend/
+│   ├── db/
+│   │   └── mongo.js
+│   ├── middlewares/
+│   │   └── admin.js
+│   ├── routes/
+│   │   ├── admin.js
+│   │   └── user.js
+│   ├── .env
+│   ├── .gitignore
+│   ├── package.json
+│   ├── package-lock.json
+│   └── vercel.json
+├── frontend/
+│   ├── components/
+│   │   └── Loading.jsx
+│   ├── pages/
+│   │   ├── images/
+│   │   │   ├── copy.png
+│   │   │   └── doodle.png
+│   │   ├── AdminAmas.jsx
+│   │   ├── CreateAmas.jsx
+│   │   ├── Landing.jsx
+│   │   ├── Login.jsx
+│   │   └── SignUp.jsx
+│   ├── src/
+│   │   ├── assets/
+│   │   │   └── react.svg
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── .env
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── README.md
+│   ├── vercel.json
+│   └── vite.config.js
+└── README.md
 
 # Tech Stack 💻
 
